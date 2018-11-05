@@ -18,6 +18,7 @@ function [final,regionImage] = generate_depth_map(image)
     final = uint8(final);
 
     [regionImage, labeledImage] = detect_regions(H,med);
+    type = classification(labeledImage)
 %     final1=uint8(regionImage);
 %     figure;
 %     imshow(final1)
